@@ -39,7 +39,7 @@ def getTemp(sid):
         bp_rp = obj['bp_rp'];
         bp_rp = bp_rp[0];
         b_v = (32875-math.sqrt(1077605530-275750000*bp_rp))/5515;
-        temp = 5601/(b_v+0.4)**(2/3);
+        temp = 8540/(b_v+0.865);
         return temp;
 
 
