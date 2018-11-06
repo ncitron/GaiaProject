@@ -8,9 +8,9 @@
       <input type="submit" value="Go" class="input-reset button-reset pa2 ba arial">
     </form>
   </section>
-
+  <br />
   {% if RA %}
-  <section>
+  <section class="-ba">
     <h2>Results</h2>
     <table>
       <tbody>
@@ -33,6 +33,10 @@
         <tr>
           <td><b>Radius (r star / r sun)</b></td>
           <td>{{radius}}</td>
+        </tr>
+        <tr>
+          <td><b>Stellar Class</b></td>
+          <td>{{stellclass}}</td>
         </tr>
       </tbody>
     </table>

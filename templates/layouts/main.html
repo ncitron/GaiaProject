@@ -11,12 +11,24 @@
 		  margin-bottom: 12%;
 		  text-align: center;
 		}
+
+		main > section {
+			text-align: center;
+		}
+
+		main > section table {
+			margin-bottom: 5px;
+		}
+		.-ba {
+			border: 1px solid #333;
+		}
+
 		</style>
 	</head>
 
 	<body>
 		<header>
-			<h1>{% block title %}{% endblock %}</h1>
+			<h1>{{ self.title() }}</h1>
 		</header>
 		<main>
 			{% block content %}{% endblock %}

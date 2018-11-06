@@ -57,17 +57,17 @@ def getClass(sid):
     stell ="Default"
     if(temp < 3500):
         stell = "M"
-    elif(temp > 3,500):
+    if(temp > 3500):
         stell = "K"
-    elif(temp > 5000):
+    if(temp > 5000):
         stell = "G"
-    elif(temp > 6000):
+    if(temp > 6000):
         stell = "F"
-    elif(temp > 7500):
+    if(temp > 7500):
         stell = "A"
-    elif(temp > 11000):
+    if(temp > 11000):
         stell = "B"
-    elif(temp > 25000):
+    if(temp > 25000):
         stell = "O"
 
     return stell

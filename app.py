@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from flask import Flask, render_template, request
 import logging
 from logging import Formatter, FileHandler
