@@ -52,6 +52,26 @@ def getRadius(sid):
     r = (5800/getTemp(sid))**2 * (2.512**(4.68-absmag))**(1/2);     #need to find a better fit for the magnitude of sun in Gaia G band
     return r;
 
+def getClass(sid):
+    temp = getTemp(sid)
+    stell ="Default"
+    if(temp < 3500):
+        stell = "M"
+    elif(temp > 3,500):
+        stell = "K"
+    elif(temp > 5000):
+        stell = "G"
+    elif(temp > 6000):
+        stell = "F"
+    elif(temp > 7500):
+        stell = "A"
+    elif(temp > 11000):
+        stell = "B"
+    elif(temp > 25000):
+        stell = "O"
+
+    return stell
+
 
 def star(ra, dec):
     stats = []
@@ -59,6 +79,7 @@ def star(ra, dec):
     stats.append(getDist(findObj(coord)));
     stats.append(getTemp(findObj(coord)));
     stats.append(getRadius(findObj(coord)));
+    stats.append(getClass(findObj(coord)));
     print(stats)
     return stats;
 

@@ -31,10 +31,10 @@ def search():
     else:
         RA = ""
         DEC = ""
-        mystar = ["", "", ""]
+        mystar = ["", "", "", ""]
 
     print(mystar)
-    return render_template('pages/search.html', form=form, RA=RA, DEC=DEC, dist=mystar[0], temp=mystar[1], radius=mystar[2])
+    return render_template('pages/search.html', form=form, RA=RA, DEC=DEC, dist=mystar[0], temp=mystar[1], radius=mystar[2], stellclass=mystar[3])
 
 
 # Error handlers.
