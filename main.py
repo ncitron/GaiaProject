@@ -9,7 +9,7 @@ def getTables():
     for table in tables:
         result.append(table.get_qualified_name());
     return result;
-
+#Change
 
 def tester():
     query = "select count(*) as numEntries from gaiadr2.gaia_source where bp_rp > 1.5";
