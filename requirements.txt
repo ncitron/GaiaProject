@@ -1,0 +1,9 @@
+Fabric
+Flask-WTF
+WTForms
+coverage
+astropy
+astroquery
+# ecdsa
+# paramiko
+# pycrypto
