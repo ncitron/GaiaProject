@@ -53,11 +53,14 @@ def getRadius(sid):
     return r;
 
 
-
-coord=SkyCoord('05h46m57.34096s', '−14d49m19.0199s');
-print("Distance (ly): " + str(getDist(findObj(coord))));
-print("Temperature (K): " + str(getTemp(findObj(coord))));
-print(getRadius(findObj(coord)));
+def star(ra, dec):
+    stats = []
+    coord=SkyCoord(ra, dec);
+    stats.append(getDist(findObj(coord)));
+    stats.append(getTemp(findObj(coord)));
+    stats.append(getRadius(findObj(coord)));
+    print(stats)
+    return stats;
 
 #print(*getTables(), sep = '\n');
 #tester();

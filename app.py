@@ -3,7 +3,7 @@ import logging
 from logging import Formatter, FileHandler
 from forms import SearchForm
 import os
-
+from main import *
 
 # App Config
 
@@ -18,14 +18,23 @@ app.config['SECRET_KEY'] = 'any secret string'
 #    return render_template('layouts/main.html')
 
 
+
+
 @app.route('/', methods=['GET', 'POST'])
 def search():
+
     form = SearchForm(request.form)
     if request.method == 'POST':
         RA = request.form['right_ascension']
         DEC = request.form['declination']
-        print(RA)
-    return render_template('pages/search.html', form=form)
+        mystar = star(RA, DEC)
+    else:
+        RA = ""
+        DEC = ""
+        mystar = ["", "", ""]
+
+    print(mystar)
+    return render_template('pages/search.html', form=form, RA=RA, DEC=DEC, dist=mystar[0], temp=mystar[1], radius=mystar[2])
 
 
 # Error handlers.

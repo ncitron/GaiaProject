@@ -6,4 +6,18 @@
     {{ form.declination(class_ = 'input-reset', placeholder = form.declination.label.text, required = true) }}
     <input type="submit" value="Go" class="input-reset button-reset pa2 ba arial">
   </form>
+
+
+  <div>
+    Right Ascension: {{RA}}
+    <br />
+    Declination: {{DEC}}
+    <br />
+    Distance (ly): {{dist}}
+    <br />
+    Temperature (K): {{temp}}
+    <br />
+    Radius (r star / r sun): {{radius}}
+  </div>
+
 {% endblock %}
