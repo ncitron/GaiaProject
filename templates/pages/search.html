@@ -1,23 +1,41 @@
 {% extends 'layouts/main.html' %}
 {% block title %}Search{% endblock %}
 {% block content %}
-  <form method="post" action="" class="arial">
-    {{ form.right_ascension(class_ = 'input-reset', placeholder = form.right_ascension.label.text, required = true, autofocus = true) }}
-    {{ form.declination(class_ = 'input-reset', placeholder = form.declination.label.text, required = true) }}
-    <input type="submit" value="Go" class="input-reset button-reset pa2 ba arial">
-  </form>
+  <section>
+    <form method="post" action="" class="arial">
+      {{ form.right_ascension(class_ = 'input-reset', placeholder = form.right_ascension.label.text, required = true, autofocus = true) }}
+      {{ form.declination(class_ = 'input-reset', placeholder = form.declination.label.text, required = true) }}
+      <input type="submit" value="Go" class="input-reset button-reset pa2 ba arial">
+    </form>
+  </section>
 
-
-  <div>
-    Right Ascension: {{RA}}
-    <br />
-    Declination: {{DEC}}
-    <br />
-    Distance (ly): {{dist}}
-    <br />
-    Temperature (K): {{temp}}
-    <br />
-    Radius (r star / r sun): {{radius}}
-  </div>
-
+  {% if RA %}
+  <section>
+    <h2>Results</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td><b>Right Ascension</b></td>
+          <td>{{RA}}</td>
+        </tr>
+        <tr>
+          <td><b>Declination</b></td>
+          <td>{{DEC}}</td>
+        </tr>
+        <tr>
+          <td><b>Distance (ly)</b></td>
+          <td>{{dist}}</td>
+        </tr>
+        <tr>
+          <td><b>Temperature (K)</b></td>
+          <td>{{temp}}</td>
+        </tr>
+        <tr>
+          <td><b>Radius (r star / r sun)</b></td>
+          <td>{{radius}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  {% endif %}
 {% endblock %}

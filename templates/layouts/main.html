@@ -3,11 +3,21 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{% block title %}{% endblock %}</title>
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/7.0.1-4/tachyons.min.css" rel="stylesheet">
+		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/7.0.1-4/tachyons.min.css" rel="stylesheet"> -->
+		<link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+		<link rel="stylesheet" href="https://unpkg.com/sakura.css@1.0.0/css/sakura.css">
+		<style>
+		header {
+		  margin-bottom: 12%;
+		  text-align: center;
+		}
+		</style>
 	</head>
 
 	<body>
-		<header class="w-100 tc bg-light-gray bb"></header>
+		<header>
+			<h1>{% block title %}{% endblock %}</h1>
+		</header>
 		<main>
 			{% block content %}{% endblock %}
 		</main>
