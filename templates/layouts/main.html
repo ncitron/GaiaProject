@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %} | GaiaProject</title>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/7.0.1-4/tachyons.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<header class="w-100 tc bg-light-gray bb">{% block title %}{% endblock %}</header>
+		<main>
+			{% block content %}{% endblock %}
+		</main>
+	</body>
+</html>

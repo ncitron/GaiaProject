@@ -1,0 +1,9 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Search!{% endblock %}
+{% block content %}
+  <form method="post" action="" class="arial">
+    {{ form.right_ascension(class_ = 'input-reset', placeholder = form.right_ascension.label.text, required = true, autofocus = true) }}
+    {{ form.declination(class_ = 'input-reset', placeholder = form.declination.label.text, required = true) }}
+    <input type="submit" value="Go" class="input-reset button-reset pa2 ba arial">
+  </form>
+{% endblock %}
